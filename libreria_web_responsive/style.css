@@ -816,6 +816,15 @@ footer .container {
         box-sizing: border-box;
     }
 
+    .shop-content {
+        padding: 1rem;
+    }
+
+    .price-text {
+        font-size: 1rem;
+    }
+    
+
     .sidebar-categories {
         order: -1;
         /* Sidebar at top */
