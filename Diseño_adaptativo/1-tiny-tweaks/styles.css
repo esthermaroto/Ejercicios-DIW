@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  background-color: #764ba2;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Tiny Tweaks Pattern */
+.columna1 {
+  padding: 20px;
+  width: 100%;
+  background-color: #f093fb;
+  color: white;
+  min-height: 400px;
+  font-size: 1.5em;
+  border-radius: 10px;
+  margin: 20px;
+  
+}
+
+/* Media Queries */
+@media (min-width: 600px) {
+  .columna1 {
+    padding: 20px;
+    font-size: 1.5em;
+    background-color: #4facfe;
+  }
+}
+
+@media (min-width: 800px) {
+  .columna1 {
+    padding: 40px;
+    font-size: 2em;
+    background-color: #43e97b;
+  }
+}
+
