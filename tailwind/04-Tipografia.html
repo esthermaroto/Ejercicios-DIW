@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>04. Tipografía</title>
+    <!-- Incluimos Google Font: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="p-10 space-y-12">
+    <!-- 1. Fuentes Personalizadas -->
+    <section>
+      <h2 class="text-2xl font-bold mb-4">1. Fuentes Personalizadas</h2>
+      <div class="border p-6 rounded-lg bg-gray-50">
+        <p class="mb-4">
+          Texto con fuente por defecto (sans-serif de Tailwind).
+        </p>
+
+        <p class="font-[Plus_Jakarta_Sans] text-xl mb-4">
+          Este texto usa "Plus Jakarta Sans" mediante
+          `font-[Plus_Jakarta_Sans]`.
+        </p>
+
+        <p class="font-[cursive] text-2xl text-purple-600">
+          Este texto usa una fuente genérica `font-[cursive]`.
+        </p>
+      </div>
+    </section>
+
+    <!-- 2. Tamaños -->
+    <section>
+      <h2 class="text-2xl font-bold mb-4">2. Tamaños de Fuente</h2>
+      <div class="space-y-2 border-l-4 border-blue-500 pl-4">
+        <p class="text-xs">text-xs (Extra pequeño)</p>
+        <p class="text-sm">text-sm (Pequeño)</p>
+        <p class="text-base">text-base (Base - 16px)</p>
+        <p class="text-lg">text-lg (Largo)</p>
+        <p class="text-xl">text-xl (Extra largo)</p>
+        <p class="text-2xl">text-2xl</p>
+        <p class="text-4xl">text-4xl</p>
+        <hr class="my-4" />
+        <p class="text-[40px] text-blue-600">
+          text-[40px] (Tamaño arbitrario exacto)
+        </p>
+      </div>
+    </section>
+
+    <!-- 3. Pesos -->
+    <section>
+      <h2 class="text-2xl font-bold mb-4">3. Pesos (Font Weight)</h2>
+      <!-- Usamos la fuente personalizada que tiene muchos pesos disponibles -->
+      <div class="font-[Plus_Jakarta_Sans] space-y-2 text-lg">
+        <p class="font-thin">font-thin (100)</p>
+        <p class="font-light">font-light (300)</p>
+        <p class="font-normal">font-normal (400)</p>
+        <p class="font-medium">font-medium (500)</p>
+        <p class="font-bold">font-bold (700)</p>
+        <p class="font-black">font-black (900)</p>
+      </div>
+    </section>
+
+    <!-- 4. Alineación y Estilos -->
+    <section>
+      <h2 class="text-2xl font-bold mb-4">
+        4. Alineación y Estilos Combinados
+      </h2>
+
+      <div class="bg-gray-100 p-6 space-y-4">
+        <h1
+          class="text-3xl font-bold text-center text-blue-800 uppercase tracking-widest"
+        >
+          Título Centrado y Uppercase
+        </h1>
+
+        <p class="text-justify text-gray-700 leading-relaxed">
+          <span class="font-bold text-black">text-justify:</span> Lorem ipsum
+          dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+          commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+          velit esse cillum dolore.
+        </p>
+
+        <p class="text-right text-sm italic text-gray-500">
+          — Cita alineada a la derecha (text-right italic)
+        </p>
+      </div>
+    </section>
+  </body>
+</html>

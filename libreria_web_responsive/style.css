@@ -241,28 +241,9 @@ main {
     padding: 2rem;
     background-color: transparent;
     overflow: hidden;
-    /* Critical: Contain rotated dragon images */
 }
 
-.hero-dragon-bubble {
-    position: absolute;
-    width: 300px;
-    height: auto;
-    opacity: 0.1;
-    z-index: 1;
-}
 
-.dragon-left {
-    left: 5%;
-    top: 20%;
-    transform: rotate(-15deg);
-}
-
-.dragon-right {
-    right: 5%;
-    top: 15%;
-    transform: rotate(10deg);
-}
 
 .hero-card {
     background: var(--secondary-cream);
@@ -789,7 +770,7 @@ footer .container {
 /* -----------------------------------------
    TABLET (601px - 1024px)
    ----------------------------------------- */
-@media (min-width: 820px) and (max-width: 1180px) {
+@media (min-width: 601px) and (max-width: 1024px) {
 
     /* --- Header Layout --- */
     /* Removed wrapping to keep single line as requested */
@@ -799,14 +780,10 @@ footer .container {
     }
 
     nav ul li a {
-        font-size: 0.70rem;
+        font-size: 0.50rem;
     }
 
-    .logo-img {
-        width: 80px;
-        height: 80px;
-    }
-
+    
     /* --- Page: Products (Tablet) --- */
     /* Requirement: Content stacks, Sidebar top or bottom */
     .shop-container {
@@ -879,6 +856,18 @@ footer .container {
         width: 10px;
         height: 10px;
     }
+
+    .logo-img {
+        height: 40px;
+    }
+
+    .logo span.ink {
+        font-size: 1.5rem;
+    }
+
+    .logo span.heart {
+        font-size: 1.8rem;
+    }
 }
 
 /* -----------------------------------------
@@ -948,7 +937,6 @@ footer .container {
         flex-direction: column;
         width: 100%;
         background: rgba(0, 0, 0, 0.6);
-        /* Darker background for legibility */
         border-radius: 10px;
         padding: 0.5rem;
         align-items: center;
@@ -1012,19 +1000,6 @@ footer .container {
 
     .footer-copyright {
         flex-direction: column-reverse;
-    }
-
-    /* Overflow Protection */
-    .hero-dragon-bubble {
-        opacity: 0.05;
-        width: 60px;
-        /* Reduced specific size */
-        max-width: 15%;
-    }
-
-    .speech-bubble-icon {
-        left: 0;
-        width: 50px;
     }
 
     .logo-img {
