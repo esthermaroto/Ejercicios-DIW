@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>06. Flexbox</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Estilos adicionales para visualizar mejor los contenedores flex */
+      .demo-box {
+        background-color: #3b82f6; /* blue-500 */
+        color: white;
+        padding: 1rem;
+        border: 2px solid #2563eb; /* blue-600 */
+        border-radius: 0.5rem;
+        font-weight: bold;
+      }
+      .container-box {
+        background-color: #f3f4f6; /* gray-100 */
+        border: 2px dashed #9ca3af; /* gray-400 */
+        padding: 1rem;
+        margin-bottom: 1rem;
+        border-radius: 0.5rem;
+      }
+    </style>
+  </head>
+  <body class="p-8 bg-white text-gray-800">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-4xl font-bold mb-6 text-slate-800">06. Flexbox</h1>
+      <p class="mb-8 text-lg text-gray-600">
+        Flexbox es un sistema de layout unidimensional que facilita la
+        alineación y distribución de elementos en un contenedor.
+      </p>
+
+      <!-- 1. Activar Flexbox -->
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-4 border-b pb-2">
+          1. Activar Flexbox
+        </h2>
+        <p class="mb-4">
+          Para convertir un elemento en un contenedor flex, usa la clase
+          <code>flex</code>.
+        </p>
+
+        <div class="container-box flex">
+          <div class="demo-box mr-4">Hijo 1</div>
+          <div class="demo-box mr-4">Hijo 2</div>
+          <div class="demo-box">Hijo 3</div>
+        </div>
+        <p class="text-sm text-gray-500 italic">
+          Los hijos se colocan automáticamente en fila.
+        </p>
+      </section>
+
+      <!-- 2. Dirección -->
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-4 border-b pb-2">
+          2. Dirección (<code>flex-direction</code>)
+        </h2>
+
+        <h3 class="font-bold mt-4 mb-2">
+          Fila (<code>flex-row</code>) - Por defecto
+        </h3>
+        <div class="container-box flex flex-row">
+          <div class="demo-box mr-2">1</div>
+          <div class="demo-box mr-2">2</div>
+          <div class="demo-box">3</div>
+        </div>
+
+        <h3 class="font-bold mt-4 mb-2">Columna (<code>flex-col</code>)</h3>
+        <div class="container-box flex flex-col">
+          <div class="demo-box mb-2">1</div>
+          <div class="demo-box mb-2">2</div>
+          <div class="demo-box">3</div>
+        </div>
+
+        <h3 class="font-bold mt-4 mb-2">
+          Fila Invertida (<code>flex-row-reverse</code>)
+        </h3>
+        <div class="container-box flex flex-row-reverse">
+          <div class="demo-box ml-2">1</div>
+          <div class="demo-box ml-2">2</div>
+          <div class="demo-box">3</div>
+        </div>
+      </section>
+
+      <!-- 3. Alineación Vertical -->
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-4 border-b pb-2">
+          3. Alineación Vertical (<code>items-</code>)
+        </h2>
+        <p class="mb-4">
+          Controla la alineación en el eje transversal (perpendicular).
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <h3 class="font-bold mb-2"><code>items-start</code></h3>
+            <div class="container-box flex items-start h-32">
+              <div class="demo-box h-12">A</div>
+              <div class="demo-box h-20 mx-2">B</div>
+              <div class="demo-box h-16">C</div>
+            </div>
+          </div>
+          <div>
+            <h3 class="font-bold mb-2"><code>items-center</code></h3>
+            <div class="container-box flex items-center h-32">
+              <div class="demo-box h-12">A</div>
+              <div class="demo-box h-20 mx-2">B</div>
+              <div class="demo-box h-16">C</div>
+            </div>
+          </div>
+          <div>
+            <h3 class="font-bold mb-2"><code>items-end</code></h3>
+            <div class="container-box flex items-end h-32">
+              <div class="demo-box h-12">A</div>
+              <div class="demo-box h-20 mx-2">B</div>
+              <div class="demo-box h-16">C</div>
+            </div>
+          </div>
+          <div>
+            <h3 class="font-bold mb-2"><code>items-stretch</code> (Default)</h3>
+            <div class="container-box flex items-stretch h-32">
+              <div class="demo-box">A</div>
+              <div class="demo-box mx-2">B</div>
+              <div class="demo-box">C</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. Distribución Horizontal -->
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-4 border-b pb-2">
+          4. Distribución Horizontal (<code>justify-</code>)
+        </h2>
+        <p class="mb-4">Controla la distribución en el eje principal.</p>
+
+        <h3 class="font-bold mt-4 mb-2">
+          <code>justify-start</code> (Default)
+        </h3>
+        <div class="container-box flex justify-start">
+          <div class="demo-box w-16 text-center mx-1">1</div>
+          <div class="demo-box w-16 text-center mx-1">2</div>
+          <div class="demo-box w-16 text-center mx-1">3</div>
+        </div>
+
+        <h3 class="font-bold mt-4 mb-2"><code>justify-center</code></h3>
+        <div class="container-box flex justify-center">
+          <div class="demo-box w-16 text-center mx-1">1</div>
+          <div class="demo-box w-16 text-center mx-1">2</div>
+          <div class="demo-box w-16 text-center mx-1">3</div>
+        </div>
+
+        <h3 class="font-bold mt-4 mb-2"><code>justify-end</code></h3>
+        <div class="container-box flex justify-end">
+          <div class="demo-box w-16 text-center mx-1">1</div>
+          <div class="demo-box w-16 text-center mx-1">2</div>
+          <div class="demo-box w-16 text-center mx-1">3</div>
+        </div>
+
+        <h3 class="font-bold mt-4 mb-2"><code>justify-between</code></h3>
+        <div class="container-box flex justify-between">
+          <div class="demo-box w-16 text-center">1</div>
+          <div class="demo-box w-16 text-center">2</div>
+          <div class="demo-box w-16 text-center">3</div>
+        </div>
+
+        <h3 class="font-bold mt-4 mb-2"><code>justify-around</code></h3>
+        <div class="container-box flex justify-around">
+          <div class="demo-box w-16 text-center">1</div>
+          <div class="demo-box w-16 text-center">2</div>
+          <div class="demo-box w-16 text-center">3</div>
+        </div>
+
+        <h3 class="font-bold mt-4 mb-2"><code>justify-evenly</code></h3>
+        <div class="container-box flex justify-evenly">
+          <div class="demo-box w-16 text-center">1</div>
+          <div class="demo-box w-16 text-center">2</div>
+          <div class="demo-box w-16 text-center">3</div>
+        </div>
+      </section>
+
+      <!-- 5. Espaciado Gap -->
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-4 border-b pb-2">
+          5. Espaciado (<code>gap-</code>)
+        </h2>
+        <p class="mb-4">Espacio automático entre hijos.</p>
+
+        <div class="container-box flex gap-8">
+          <div class="demo-box">Elemento 1</div>
+          <div class="demo-box">Elemento 2</div>
+          <div class="demo-box">Elemento 3</div>
+        </div>
+        <p class="text-sm text-gray-500">
+          Aquí hay un <code>gap-8</code> (32px) entre cada elemento.
+        </p>
+      </section>
+
+      <!-- 6. Ejemplo Completo Navbar -->
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-4 border-b pb-2">
+          6. Ejemplo Completo: Navbar
+        </h2>
+        <div class="border rounded-lg overflow-hidden mb-4">
+          <nav
+            class="h-20 bg-slate-800 flex items-center justify-between px-10"
+          >
+            <!-- Simulación de Logo -->
+            <div
+              class="h-10 w-32 bg-gray-200 rounded flex items-center justify-center font-bold text-slate-800"
+            >
+              LOGO
+            </div>
+
+            <div class="text-white flex gap-10 hidden md:flex">
+              <a href="#" class="hover:text-blue-300">Inicio</a>
+              <a href="#" class="hover:text-blue-300">Acerca de</a>
+              <a href="#" class="hover:text-blue-300">Contacto</a>
+            </div>
+
+            <a
+              href="#"
+              class="bg-amber-700 hover:bg-amber-600 text-white px-7 py-3 rounded-lg transition"
+              >Contáctame</a
+            >
+          </nav>
+        </div>
+        
+      </section>
+
+      <!-- 7. Alineación Individual -->
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-4 border-b pb-2">
+          7. Alineación Individual (<code>self-</code>)
+        </h2>
+        <div class="container-box flex items-center h-40">
+          <div class="demo-box h-12">Centrado</div>
+          <div class="demo-box h-12 self-start bg-purple-500 border-purple-600">
+            self-start
+          </div>
+          <div class="demo-box h-12 self-end bg-pink-500 border-pink-600">
+            self-end
+          </div>
+          <div
+            class="demo-box self-stretch bg-green-500 border-green-600 flex items-center"
+          >
+            self-stretch
+          </div>
+        </div>
+      </section>
+
+      <!-- 8. Orden -->
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-4 border-b pb-2">
+          8. Orden (<code>order-</code>)
+        </h2>
+        <div class="container-box flex gap-4">
+          <div class="demo-box order-2 bg-red-500 border-red-600">
+            1 (order-2)
+          </div>
+          <div
+            class="demo-box order-1 bg-yellow-500 border-yellow-600 text-black"
+          >
+            2 (order-1)
+          </div>
+          <div class="demo-box order-3 bg-green-500 border-green-600">
+            3 (order-3)
+          </div>
+          <div class="demo-box">4 (Default)</div>
+        </div>
+        <p class="text-sm text-gray-500">
+          Nota: Los elementos con <code>order</code> explícito se ordenan según
+          el número. El default es 0.
+        </p>
+      </section>
+
+      <!-- 9. Crecimiento y Encogimiento -->
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-4 border-b pb-2">
+          9. Crecimiento y Encogimiento
+        </h2>
+
+        <h3 class="font-bold mt-4 mb-2">
+          <code>flex-1</code> (Crece para ocupar espacio)
+        </h3>
+        <div class="container-box flex gap-4">
+          <div class="demo-box flex-none w-14">Fijo</div>
+          <div class="demo-box flex-1 bg-purple-500 border-purple-600">
+            flex-1 (Ocupa el resto)
+          </div>
+          <div class="demo-box flex-none w-14">Fijo</div>
+        </div>
+      </section>
+
+      <!-- 10. Wrap -->
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-4 border-b pb-2">
+          10. Wrap (<code>flex-wrap</code>)
+        </h2>
+        <p class="mb-2">
+          Sin <code>flex-wrap</code> (los elementos se aplastan o desbordan):
+        </p>
+        <div class="container-box flex mb-6 overflow-hidden">
+          <div class="demo-box w-1/3 flex-none mb-2 mx-1">Item 1</div>
+          <div class="demo-box w-1/3 flex-none mb-2 mx-1">Item 2</div>
+          <div class="demo-box w-1/3 flex-none mb-2 mx-1">Item 3</div>
+          <div class="demo-box w-1/3 flex-none mb-2 mx-1 bg-red-500">
+            Item 4 (Problema)
+          </div>
+        </div>
+
+        <p class="mb-2">Con <code>flex-wrap</code> (saltan de línea):</p>
+        <div class="container-box flex flex-wrap">
+          <div class="demo-box w-1/3 mb-2 mr-2">Item 1</div>
+          <div class="demo-box w-1/3 mb-2 mr-2">Item 2</div>
+          <div class="demo-box w-1/3 mb-2 mr-2">Item 3</div>
+          <div class="demo-box w-1/3 mb-2 mr-2 bg-green-500 border-green-600">
+            Item 4 (Salta)
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
